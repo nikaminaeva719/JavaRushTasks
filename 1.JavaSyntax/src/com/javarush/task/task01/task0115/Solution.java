@@ -1,20 +1,39 @@
-package com.javarush.task.task01.task0115;
+package com.javarush.task.pro.task03.task0302;
 
-/* 
-Ну это… С новым годом!
+import java.util.Scanner;
+
+/*
+Призывная кампания
 */
+
+
+
+/*public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int age = scanner.nextInt();
+        if (age >= 6 && age >18)
+            System.out.println("Нужно терпеть школу");
+        else
+            System.out.println("Пора арбайтен");
+    }
+} */
+/*public class Solution {
+    public static void main(String[] args) {
+       Scanner scanner = new Scanner(System.in);
+        int age = scanner.nextInt();
+        if (age < 18) {
+            if (age > 5) {
+                System.out.println("нужно ходить в школу");
+            }
+        } else {
+            System.out.println("пора в институт");
+        }
+    }
+} */
 
 public class Solution {
     public static void main(String[] args) {
-        // String s = "Merry";
-        // System.out.println("Christmas");
-        // System.out.println("Merry New");
-        // System.out.println("weekend");
-        System.out.print("Happy New");
-        // System.out.println("weekend");
-        // System.out.println(s);
-        // System.out.print("Merry New!");
-        System.out.print(" ");
-        System.out.println("Year");
+       
     }
 }
