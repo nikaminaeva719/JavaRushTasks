@@ -7,12 +7,14 @@ import java.util.Scanner;
 */
 
 public class Solution {
-    private static boolean isHigh;
-    private static boolean isLow;
-
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        double bodyTemperature = scanner.nextDouble();
+        for (int i = 0; i < 10; i++)
+        {
+            int starCount = 10 - i;
+            for (int j = 2; j < starCount; j++)
+                System.out.print("*");
+            System.out.println();
+        }
 
     }
 }
