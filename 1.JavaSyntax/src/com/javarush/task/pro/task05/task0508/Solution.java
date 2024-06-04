@@ -17,10 +17,20 @@ public class Solution {
             strings[i] = keyboard.nextLine();
         }
         for (int i = 0; i < strings.length; i++) {
-            if (strings[i].equals(strings[i + 1])) {
-                strings[i] = "";
-            }
 
+            String str = strings[i];
+            for (int j = i + 1; j < strings.length; j++) {
+                if (str == null) {
+                    break;
+                }
+
+                if (str.equals(strings[j])) {
+                    strings[i] = null;
+                    strings[j] = null;
+
+                }
+
+            }
         }
 
         for (int i = 0; i < strings.length; i++) {
