@@ -7,11 +7,10 @@ import java.util.Scanner;
 */
 
 public class Solution {
-    public static int[] array;
+    public static int[] str;
 
     public static void main(String[] args) throws Exception {
-        Scanner keyoard = new Scanner(System.in);
-        int n = keyoard.nextInt();
+
 
     }
 }
