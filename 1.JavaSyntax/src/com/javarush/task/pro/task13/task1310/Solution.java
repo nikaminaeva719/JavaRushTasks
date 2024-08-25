@@ -1,10 +1,6 @@
 package com.javarush.task.pro.task13.task1310;
 
-import java.util.Collection;
 import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
-import java.util.stream.DoubleStream;
 
 /* 
 Успеваемость студентов-2
@@ -29,23 +25,17 @@ public class Solution {
     }
 
     public static void printStudents() {
-        Set<String> strings = grades.keySet();
-        for (String string : strings) {
-            System.out.println(string);
+        for (String name : grades.keySet()) {
+            System.out.println(name);
         }
-
     }
 
+
     public static Double getAverageMark() {
-        Collection<Double> values = grades.values();
-        double sum = 0;
-        for (Double value : values) {
-            sum += value;
+        Double identity = 0d;
+        for (Double value : grades.values()) {
+            identity += value;
         }
-        return  sum/values.size();
-//        return grades.values().stream()
-//                .mapToDouble(Double::valueOf)
-//                .average()
-//                .orElseThrow();
+        return identity / grades.size();
     }
 }
