@@ -13,9 +13,10 @@ public class Solution {
         Solution solution = new Solution();
         print(solution.getUsers());
         print(solution.getLocations());
-        print(solution.getServer());
-        print(solution.getSubject());
-        print(solution.getSubscription());
+        print(solution.getServers());
+        print(solution.getSubjects());
+        print(solution.getSubscriptions());
+
     }
 
     public static void print(List list) {
@@ -27,7 +28,6 @@ public class Solution {
     }
 
     public List<User> getUsers() {
-
         return new AbstractDbSelectExecutor<User>() {
             @Override
             public String getQuery() {
@@ -45,7 +45,7 @@ public class Solution {
         }.execute();
     }
 
-    public List<Server> getServer() {
+    public List<Server> getServers() {
         return new AbstractDbSelectExecutor<Server>() {
             @Override
             public String getQuery() {
@@ -54,7 +54,7 @@ public class Solution {
         }.execute();
     }
 
-    public List<Subject> getSubject() {
+    public List<Subject> getSubjects() {
         return new AbstractDbSelectExecutor<Subject>() {
             @Override
             public String getQuery() {
@@ -63,7 +63,7 @@ public class Solution {
         }.execute();
     }
 
-    public List<Subscription> getSubscription() {
+    public List<Subscription> getSubscriptions() {
         return new AbstractDbSelectExecutor<Subscription>() {
             @Override
             public String getQuery() {
