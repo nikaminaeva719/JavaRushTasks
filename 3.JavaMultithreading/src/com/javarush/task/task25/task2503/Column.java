@@ -3,7 +3,7 @@ package com.javarush.task.task25.task2503;
 import java.util.LinkedList;
 import java.util.List;
 
-public enum Column {
+public enum Column implements Columnable{
     Customer("Customer"),
     BankName("Bank Name"),
     AccountNumber("Account Number"),
@@ -50,7 +50,27 @@ public enum Column {
      */
     public static List<Column> getVisibleColumns() {
         List<Column> result = new LinkedList<>();
+        Column[] columns = values();
+        for (int i = 0; i < realOrder.length; i++) {
+            if (realOrder[i] != -1){
 
+            }
+        }
         return result;
+    }
+
+    @Override
+    public String getColumnName() {
+        return "";
+    }
+
+    @Override
+    public boolean isShown() {
+        return false;
+    }
+
+    @Override
+    public void hide() {
+
     }
 }
