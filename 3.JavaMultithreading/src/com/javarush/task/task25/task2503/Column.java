@@ -50,11 +50,8 @@ public enum Column implements Columnable{
      */
     public static List<Column> getVisibleColumns() {
         List<Column> result = new LinkedList<>();
-        Column[] columns = values();
-        for (int i = 0; i < realOrder.length; i++) {
-            if (realOrder[i] != -1){
-
-            }
+        for (Column value : values()) {
+            value.ordinal();
         }
         return result;
     }
