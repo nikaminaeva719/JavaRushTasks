@@ -1,9 +1,11 @@
 package com.javarush.task.task25.task2503;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-public enum Column implements Columnable{
+public enum Column implements Columnable {
     Customer("Customer"),
     BankName("Bank Name"),
     AccountNumber("Account Number"),
@@ -49,25 +51,30 @@ public enum Column implements Columnable{
      * @return список колонок
      */
     public static List<Column> getVisibleColumns() {
-        List<Column> result = new LinkedList<>();
-        for (Column value : values()) {
-            value.ordinal();
+        List<Column> result = new LinkedList<>(Collections.nCopies(values().length, null));
+
+        Column[] columns = values();
+        for (int i = 0; i < columns.length; i++) {
+            if (realOrder[i] != -1) {
+                result.set(realOrder[i], columns[i]);
+            }
         }
+        result.removeAll(Collections.singleton(null));
         return result;
     }
 
     @Override
     public String getColumnName() {
-        return "";
+        return columnName;
     }
 
     @Override
     public boolean isShown() {
-        return false;
+        return realOrder[ordinal()] >= 0;
     }
 
     @Override
     public void hide() {
-
+        realOrder[ordinal()] = -1;
     }
 }
