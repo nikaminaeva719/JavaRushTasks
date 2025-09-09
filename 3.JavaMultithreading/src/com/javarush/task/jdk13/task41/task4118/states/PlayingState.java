@@ -12,13 +12,13 @@ public class PlayingState extends State{
     public String onLock() {
         player.setState(new LockedState(player));
         player.setCurrentTrackAfterStop();
-        return "Stop";
+        return "Stop playing";
     }
 
     @Override
     public String onPlay() {
         player.setState(new ReadyState(player));
-        return "Paused";
+        return "Paused...";
     }
 
     @Override

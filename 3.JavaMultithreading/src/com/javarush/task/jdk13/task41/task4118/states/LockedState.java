@@ -6,12 +6,12 @@ public class LockedState extends State {
 
     public LockedState(Player player) {
         super(player);
+        player.setPlaying(false);
     }
 
     @Override
     public String onLock() {
         if (player.isPlaying()) {
-            player.setPlaying(false);
             player.setState(new PlayingState(player));
             return "Stop playing";
         } else {
@@ -22,7 +22,7 @@ public class LockedState extends State {
     @Override
     public String onPlay() {
         player.setState(new ReadyState(player));
-        return "";
+        return "Ready";
     }
 
     @Override

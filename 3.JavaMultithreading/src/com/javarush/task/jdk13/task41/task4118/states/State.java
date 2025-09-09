@@ -9,9 +9,6 @@ public abstract class State {
         this.player = player;
     }
 
-    protected State() {
-    }
-
     public abstract String onLock();
 
     public abstract String onPlay();

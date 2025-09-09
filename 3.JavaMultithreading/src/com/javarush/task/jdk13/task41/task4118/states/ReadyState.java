@@ -8,9 +8,6 @@ public class ReadyState extends State {
         super(player);
     }
 
-    public ReadyState() {
-    }
-
     @Override
     public String onLock() {
         player.setState(new LockedState(player));
